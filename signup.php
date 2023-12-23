@@ -1,6 +1,12 @@
 <?php
 require "db.php";
-
+if(isset($_POST['submit'])) {
+    $lis = array("papa" => "mama", "tepe"=>"tema");
+    foreach ($lis as $key=>$value) {
+        # code...
+        echo $value;
+    }
+}
 ?>
 <?php include("includes/header.php") ?>
 
