@@ -1,11 +1,13 @@
 <?php
 require "db.php";
+try {
+    //code...
 if(isset($_POST['submit'])) {
-    $lis = array("papa" => "mama", "tepe"=>"tema");
-    foreach ($lis as $key=>$value) {
-        # code...
-        echo $value;
-    }
+    echo "Submit done successfully";
+}
+
+} catch (\Throwable $th) {
+    echo $th;
 }
 ?>
 <?php include("includes/header.php") ?>
