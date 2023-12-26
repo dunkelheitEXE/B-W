@@ -7,6 +7,7 @@
     
     <link rel="stylesheet" href="style/style.css">
     <link rel="stylesheet" href="style/menu.css">
+    <link rel="stylesheet" href="style/carrousel.css">
     <title>Document</title>
 </head>
 <body>
@@ -16,7 +17,6 @@
     </div>
 
     <div class="menu-droped" id="menu-droped">
-        <li><a href="" id="button"><span class="material-symbols-outlined">close</span></a></li>
         <li><a href="index.php">HOME</a></li>
         <li><a href="">Log in</a></li>
         <li><a href="signup.php">Sign up</a></li>

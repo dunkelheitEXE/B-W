@@ -14,3 +14,5 @@ button.addEventListener("click", ()=>{
         st=false;
     }
 });
+
+///CARROUSEL SECTION

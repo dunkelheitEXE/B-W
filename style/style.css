@@ -50,3 +50,55 @@
 #main-title img {
     margin: 0 5px;
 }
+
+#button {
+    position: fixed;
+    background-color: var(--color-dark);
+    padding: 12px;
+    top: 0;
+    left: 0;
+}
+
+#button:hover {
+    background-color: white;
+}
+
+
+/* ---- TITLES AND FONTS ---- */
+
+.title {
+    width: 50%;
+    margin: 25px auto;
+    text-align: center;
+    font-size: 25px;
+    font-weight: 900;
+}
+
+.subtitle {
+    width: 50%;
+    margin: 25px auto;
+    text-align: center;
+    font-size: 19px;
+    font-weight: 500;
+}
+
+/* TARGETS */
+
+.tg {
+    width: 65%;
+    margin: 25px auto;
+    text-align: center;
+    padding: 15px;
+    border-radius: 10px;
+    border: 2px solid var(--color-soft);
+}
+
+.tg-danger {
+    background-color: var(--color-danger);
+    color: white;
+}
+
+.tg-success {
+    background-color: var(--color-success);
+    color: var(--color-dark);
+}
