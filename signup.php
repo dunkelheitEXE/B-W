@@ -1,13 +1,13 @@
 <?php include("includes/header.php");?>
 <?php
-require "config/Db.php";
-$con = new DatabaseConnect;
+require "Db.php";
 $mes = "";
 if (isset($_POST['submit'])) {
     if($_POST['confirm'] != $_POST['password']) {
         $mes = "Password has not been confirmed";
     } else {
-        $mes = $con->insert("users", "email, password, nickname, profilephoto", ":email, :password, :nickname, :profilephoto", "email, password, nickname, profilephoto");
+        //$mes = $con->insert("users", "useremail, userpassword, username, userphoto", ":useremail, :userpassword, :username, :userphoto", "email, password, nickname, profilephoto");
+        $mes = $connection->insert("users", "useremail, userpassword, username, userphoto", ":useremail, :userpassword, :username, :userphoto", "email, password, nickname, profilephoto");
     }
 }
 
