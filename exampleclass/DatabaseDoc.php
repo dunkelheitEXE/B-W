@@ -38,4 +38,20 @@ class Database {
 
         return $mes;
     }
+
+    function getId($table, $field, $param, $post, $passwordfield) {
+        $gottenId = "";
+        $sql = "SELECT * FROM $table WHERE $field = $param";
+        $query = $this->connection->prepare($sql);
+        $query->bindParam($param, $_POST[$post]);
+        $query->execute();
+
+        $results = $query->fetch(PDO::FETCH_ASSOC);
+        if(count($results) > 0 && password_verify($_POST[$post], $results[$passwordfield])) {
+            $gottenId = $results['id'];
+        }
+
+        return $gottenId;
+    }
 }
+?>

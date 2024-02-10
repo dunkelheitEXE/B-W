@@ -18,6 +18,6 @@
 
     <div class="menu-droped" id="menu-droped">
         <li><a href="index.php">HOME</a></li>
-        <li><a href="">Log in</a></li>
+        <li><a href="login.php">Log in</a></li>
         <li><a href="signup.php">Sign up</a></li>
     </div>

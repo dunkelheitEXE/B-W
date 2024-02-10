@@ -1,5 +1,6 @@
 <?php include("includes/header.php");?>
 <?php
+session_start();
 require "Db.php";
 $mes = "";
 if (isset($_POST['submit'])) {
@@ -8,6 +9,7 @@ if (isset($_POST['submit'])) {
     } else {
         //$mes = $con->insert("users", "useremail, userpassword, username, userphoto", ":useremail, :userpassword, :username, :userphoto", "email, password, nickname, profilephoto");
         $mes = $connection->insert("users", "useremail, userpassword, username, userphoto", ":useremail, :userpassword, :username, :userphoto", "email, password, nickname, profilephoto");
+        
     }
 }
 
