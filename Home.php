@@ -1,8 +1,12 @@
 <?php include("includes/header.php"); ?>
 <?php
+session_start();
 require "Db.php" ;
-if(isset($_SESSION['user-id'])) {
+if(!isset($_SESSION['user-id'])) {
     header("Location: index.php");
+} else {
+    $r = $connection->getData('users', $_SESSION['user-id']);
+    $username=$r['username'];
 }
 ?>
 <style>
@@ -57,8 +61,8 @@ if(isset($_SESSION['user-id'])) {
     }
 </style>
 <div class="user-tag">
-    <a href="#" class="user-tag-img profile-btn"><img src="https://imgs.search.brave.com/FOFn85Dhuk49-Y3ioj-_HdI4pjVISIrfdwgO1nOan5w/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9pY29u/cy52ZXJ5aWNvbi5j/b20vcG5nL28vaW50/ZXJuZXQtLXdlYi9w/cmVqdWRpY2UvdXNl/ci0xMjgucG5n" alt=""></a>
-    <a href="#" class="user-tag-name profile-btn">Alan</a>
+    <a href="#" class="user-tag-img profile-btn"><img src="/resources/user.jpg" alt=""></a>
+    <a href="#" class="user-tag-name profile-btn"><?= $username ?></a>
     <a href="Logout.php" class="logout-btn profile-btn">LOGOUT</a>
 </div>
 

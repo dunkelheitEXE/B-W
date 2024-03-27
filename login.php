@@ -7,8 +7,14 @@ if(isset($_SESSION['user-id'])) {
 } else {
     $mess = "";
     if(isset($_POST['submit'])) {
-        $_SESSION['user-id'] = $connection->getId('users', 'useremail', ':useremail', 'email', 'userpassword');
-        header("Location: Home.php");
+        $post = $_POST['email'];
+        $id = $connection->getId('users', 'useremail', $post, 'userpassword');
+        if($id == "null" or $id == "") {
+            echo "Some field is wrong";
+        } else {
+            $_SESSION['user-id'] = $id;
+            header("Location: Home.php");
+        }
     }else {
         $mess = "Something was wrong";
     }
