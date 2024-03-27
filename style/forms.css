@@ -1,0 +1,43 @@
+:root {
+    --color-dark: #2F2F2F;
+    --color-soft: #8A8A8A;
+    --color-success: #44BF57;
+    --color-soft-success: #75D283;
+    --color-danger: #C23E3E;
+    --color-focused: #33AAB0;
+    --color-advirsement: #D07C46;
+}
+
+
+.form {
+    width: 60%;
+    padding: 20px;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    border: none;
+    background-color: gray;
+}
+
+.form-control {
+    width: 70%;
+    margin: 15px 0;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+}
+
+.form-control:focus {
+    border: 2px solid var(--color-focused);
+    box-shadow: 0 0 15px 5px var(--color-focused);
+}
+
+.form-title {
+    font-size: 25px;
+    font-weight: 800;
+    margin: 15px 0;
+}

@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="style/style.css">
     <link rel="stylesheet" href="style/menu.css">
     <link rel="stylesheet" href="style/carrousel.css">
+    <link rel="stylesheet" href="style/forms.css">
     <title>Document</title>
 </head>
 <body>

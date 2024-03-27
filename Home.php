@@ -5,12 +5,15 @@ require "Db.php" ;
 if(!isset($_SESSION['user-id'])) {
     header("Location: index.php");
 } else {
-    $r = $connection->getData('users', $_SESSION['user-id']);
-    $username=$r['username'];
+    $results = $connection->getData($_SESSION['user-id']);
+    $username=$results['username'];
+    $photo = $results['userphoto'];
+    echo "Hola";
 }
 ?>
 <style>
     .user-tag {
+        height: 49px;
         position: absolute;
         display: flex;
         top: 0;
@@ -61,8 +64,8 @@ if(!isset($_SESSION['user-id'])) {
     }
 </style>
 <div class="user-tag">
-    <a href="#" class="user-tag-img profile-btn"><img src="/resources/user.jpg" alt=""></a>
-    <a href="#" class="user-tag-name profile-btn"><?= $username ?></a>
+    <a href="#" class="user-tag-img profile-btn"><img src="<?=$photo?>" alt=""></a>
+    <a href="#" class="user-tag-name profile-btn"><?=$username?></a>
     <a href="Logout.php" class="logout-btn profile-btn">LOGOUT</a>
 </div>
 
